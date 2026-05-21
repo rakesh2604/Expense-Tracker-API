@@ -4,12 +4,12 @@ const options = {
   definition: {
     openapi: '3.0.0',
     info: {
-      title: 'Gullak Money API',
+      title: 'Expense Tracker API',
       version: '1.0.0',
       description: 'Personal finance tracker API',
     },
     servers: [
-      { url: `http://localhost:${process.env.PORT || 3000}` },
+      { url: process.env.API_URL || 'http://localhost:3000' },
     ],
     components: {
       securitySchemes: {
