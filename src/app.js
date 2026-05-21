@@ -15,6 +15,7 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
+app.get('/', (req, res) => res.redirect('/docs'));
 app.use('/docs', swaggerUi.serve, swaggerUi.setup(swaggerSpec));
 app.use('/health', healthRoutes);
 app.use('/auth', authRoutes);
